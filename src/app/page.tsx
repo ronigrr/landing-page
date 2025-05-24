@@ -69,7 +69,7 @@ export default function Home() {
               },
               {
                 category: "Frameworks",
-                skills: [".NET Core", "Azure DevOps"]
+                skills: [".NET Core", "Azure DevOps","NestJS"]
               },
               {
                 category: "Cloud & Orchestration",
@@ -77,7 +77,7 @@ export default function Home() {
               },
               {
                 category: "Databases & Messaging",
-                skills: ["PostgreSQL", "Redis", "Kafka", "RabbitMQ"]
+                skills: ["PostgreSQL", "MySQL", "Redis", "Kafka", "RabbitMQ","BullMQ"]
               },
               {
                 category: "Architecture",
