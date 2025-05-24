@@ -4,40 +4,40 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
-              <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                Backend Developer specializing in scalable, event-driven systems
+      <section className="min-h-screen flex items-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Image */}
+            <div className="relative w-full aspect-square lg:aspect-auto lg:h-[600px] order-first lg:order-none">
+              <Image
+                src="/me.jpg"
+                alt="Ronald Granovsky"
+                fill
+                className="object-cover rounded-2xl shadow-2xl"
+                priority
+              />
+            </div>
+
+            {/* Right side - Content */}
+            <div className="flex flex-col justify-center space-y-6 text-center lg:text-left">
+              <h2 className="text-lg font-semibold tracking-wider text-blue-600 dark:text-blue-400 uppercase">
+                Hello, my name is
+              </h2>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight">
+                Ronald Granovsky
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
               Backend developer with 3.5+ years of experience building scalable, real-time systems using technologies like .NET, Kafka, Kubernetes, Redis, and more...
               </p>
-              <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+              <div className="pt-4">
                 <a
                   href="/Resume.pdf"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
                   target="_blank"
                 >
-                  Download Resume
-                </a>
-                <a
-                  href="mailto:ronigrr@gmail.com"
-                  className="border border-blue-600 text-blue-600 dark:text-blue-400 px-6 py-3 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition"
-                >
-                  Contact Me
+                  Download CV
                 </a>
               </div>
-            </div>
-            <div className="relative h-64 md:h-96 order-first md:order-last">
-              <Image
-                src="/photo.jpg"
-                alt="Ronald Granovsky"
-                fill
-                className="rounded-lg object-cover"
-                priority
-              />
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function Home() {
               },
               {
                 category: "Frameworks",
-                skills: [".NET Core", "Azure DevOps", "NestJS"]
+                skills: [".NET Core", "Azure DevOps"]
               },
               {
                 category: "Cloud & Orchestration",
@@ -77,7 +77,7 @@ export default function Home() {
               },
               {
                 category: "Databases & Messaging",
-                skills: ["PostgreSQL", "Redis", "Kafka", "RabbitMQ", "BullMQ", "MySQL"]
+                skills: ["PostgreSQL", "Redis", "Kafka", "RabbitMQ"]
               },
               {
                 category: "Architecture",
@@ -98,7 +98,7 @@ export default function Home() {
             ].map((category) => (
               <div
                 key={category.category}
-                className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200"
+                className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6"
               >
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                   {category.category}
@@ -107,7 +107,7 @@ export default function Home() {
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm"
                     >
                       {skill}
                     </span>
