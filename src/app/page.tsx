@@ -76,8 +76,12 @@ export default function Home() {
                 skills: ["AWS", "Docker", "Kubernetes", "KEDA"]
               },
               {
-                category: "Databases & Messaging",
-                skills: ["PostgreSQL", "MySQL", "Redis", "Kafka", "RabbitMQ","BullMQ"]
+                category: "Databases",
+                skills: ["PostgreSQL", "MySQL", "Redis"]
+              },
+              {
+                category: "Messaging",
+                skills: ["Kafka", "RabbitMQ","BullMQ"]
               },
               {
                 category: "Architecture",
